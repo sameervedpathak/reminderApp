@@ -12,17 +12,19 @@ exports.login = function(req,res){
         user_email : email,
         user_password : password
       }, function (err, val) {
+
         var resdata={
             record:'',
             status:false,
             message :'err'
         };
-        if(val.length>0){
+        if(!err){
 	        resdata.record=val;
 	        resdata.status=true;
 	        resdata.message='successfully login welcome ';
 	        res.jsonp(resdata);
 	      }else{
+          console.log(err, 27);
           resdata.status = false;
           resdata.message = 'Wrong user name or password';
           res.jsonp(resdata);

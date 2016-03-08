@@ -1,4 +1,11 @@
 {
   "name": "mobile",
-  "app_id": ""
+  "email": "",
+  "app_id": "",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://localhost:9999/api"
+    }
+  ]
 }

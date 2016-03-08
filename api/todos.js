@@ -4,6 +4,9 @@ var CRUD = require('mysql-crud');
 var env = require('./environment');
 var connection = env.Dbconnection;
 var todosCRUD = CRUD(connection,'todos');
+var moment = require('moment');
+
+//console.log("utc time test:",moment.utc().format("DD-MM-YYYY h:mm"));
 
 exports.addtodos = function(req,res){
 /*	var rem_Date = req.body.reminder_date;
@@ -13,6 +16,9 @@ exports.addtodos = function(req,res){
    	var rem_time = req.body.reminder_time;
     var Time = new Date(rem_Date);
     var remindertime = Time.getTime();*/
+    //console.log("body:",req.body);
+
+
 
   	  todosCRUD.create({
   	  	'todo_data':req.body.todo_data,

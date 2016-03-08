@@ -22,7 +22,7 @@
     <script src="lib/ionic/js/ionic.bundle.js"></script>
     <script src="lib/angular-storage.min.js"></script>
     <!-- cordova script (this will be a 404 during development) -->
-    <script src="lib/ng-cordova.min.js"></script>
+    <script src="lib/ng-cordova.js"></script>
     <script src="cordova.js"></script>
     <script src="lib/angular-messages.min.js"></script>
     <script src="lib/ionic-datepicker.bundle.min.js"></script>
@@ -45,7 +45,7 @@
     <script type="text/javascript" charset="utf-8" src="js/PushNotification.js"></script>
     
   </head>
-  <body ng-app="starter">
+  <body ng-app="starter" class="platform-android platform-cordova platform-webview">
     <!--
       The nav bar that will be updated as we navigate between views.
     -->

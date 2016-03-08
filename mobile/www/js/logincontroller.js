@@ -18,7 +18,7 @@ angular.module('starter.controllers')
       user_email: '' ,
       user_password:''
     };
-
+console.log(baseUrl)
     $scope.userlogin = function(data,valid) {
       if(valid){
         $http.post(baseUrl + 'login', $scope.data).success(function(res,req){
