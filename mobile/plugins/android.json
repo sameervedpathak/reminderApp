@@ -19,13 +19,24 @@
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.ionicframework.myapp547861"
         },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.ionicframework.myapp547861"
+        },
         "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ionicframework.myapp547861"
+        },
+        "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "com.ionicframework.myapp547861"
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.ionicframework.myapp547861"
         },
-        "cordova-plugin-inappbrowser": {
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.myapp547861"
+        },
+        "phonegap-facebook-plugin": {
+            "APP_ID": "1623102964620661",
+            "APP_NAME": "myfbapp",
             "PACKAGE_NAME": "com.ionicframework.myapp547861"
         }
     },

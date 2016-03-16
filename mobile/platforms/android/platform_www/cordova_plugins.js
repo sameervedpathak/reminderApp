@@ -3,7 +3,6 @@ module.exports = [
     {
         "file": "plugins/com.ionic.keyboard/www/keyboard.js",
         "id": "com.ionic.keyboard.keyboard",
-        "pluginId": "com.ionic.keyboard",
         "clobbers": [
             "cordova.plugins.Keyboard"
         ]
@@ -11,7 +10,6 @@ module.exports = [
     {
         "file": "plugins/com.phonegap.plugins.PushPlugin/www/PushNotification.js",
         "id": "com.phonegap.plugins.PushPlugin.PushNotification",
-        "pluginId": "com.phonegap.plugins.PushPlugin",
         "clobbers": [
             "PushNotification"
         ]
@@ -19,32 +17,50 @@ module.exports = [
     {
         "file": "plugins/cordova-plugin-device/www/device.js",
         "id": "cordova-plugin-device.device",
-        "pluginId": "cordova-plugin-device",
         "clobbers": [
             "device"
         ]
     },
     {
+        "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+        "id": "cordova-plugin-inappbrowser.inappbrowser",
+        "clobbers": [
+            "cordova.InAppBrowser.open",
+            "window.open"
+        ]
+    },
+    {
         "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
         "id": "cordova-plugin-splashscreen.SplashScreen",
-        "pluginId": "cordova-plugin-splashscreen",
         "clobbers": [
             "navigator.splashscreen"
         ]
     },
     {
+        "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+        "id": "cordova-plugin-statusbar.statusbar",
+        "clobbers": [
+            "window.StatusBar"
+        ]
+    },
+    {
         "file": "plugins/cordova-plugin-whitelist/whitelist.js",
         "id": "cordova-plugin-whitelist.whitelist",
-        "pluginId": "cordova-plugin-whitelist",
         "runs": true
     },
     {
-        "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
-        "id": "cordova-plugin-inappbrowser.inappbrowser",
-        "pluginId": "cordova-plugin-inappbrowser",
+        "file": "plugins/ionic-plugin-keyboard/www/android/keyboard.js",
+        "id": "ionic-plugin-keyboard.keyboard",
         "clobbers": [
-            "cordova.InAppBrowser.open",
-            "window.open"
+            "cordova.plugins.Keyboard"
+        ],
+        "runs": true
+    },
+    {
+        "file": "plugins/phonegap-facebook-plugin/facebookConnectPlugin.js",
+        "id": "phonegap-facebook-plugin.FacebookConnectPlugin",
+        "clobbers": [
+            "facebookConnectPlugin"
         ]
     }
 ];
@@ -55,9 +71,12 @@ module.exports.metadata =
     "com.phonegap.plugins.PushPlugin": "2.5.0",
     "cordova-plugin-console": "1.0.2",
     "cordova-plugin-device": "1.1.0",
+    "cordova-plugin-inappbrowser": "1.3.1-dev",
     "cordova-plugin-splashscreen": "3.0.0",
+    "cordova-plugin-statusbar": "2.0.0",
     "cordova-plugin-whitelist": "1.2.0",
-    "cordova-plugin-inappbrowser": "1.3.1-dev"
-}
+    "ionic-plugin-keyboard": "1.0.8",
+    "phonegap-facebook-plugin": "0.12.0"
+};
 // BOTTOM OF METADATA
 });

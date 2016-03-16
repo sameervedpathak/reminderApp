@@ -152,6 +152,10 @@ angular.module('starter.controllers', [])
      @initialDate
      @lastDate
    */
+    //console.log("moment current time:",moment());
+    console.log("moment UTC current time:",moment.utc());
+    //console.log("getUTCHours:",new Date());
+
     $scope.utctimeobj = [];
 
     $scope.getreminders = function() {
@@ -189,6 +193,7 @@ angular.module('starter.controllers', [])
       });
     }
   
+
 
   /**
     @function deleteReminder
@@ -262,10 +267,12 @@ angular.module('starter.controllers', [])
           }
       };
 
+      console.log(moment.utc().format("DD-MM-YYYY h:mm"));
+
       $scope.timePickerObject = {
         inputEpochTime: ((new Date()).getHours() * 60 * 60),  //Optional
         step: 5,  //Optional
-        format: 12,  //Optional
+        format: 12 ,  //Optional
         titleLabel: '12-hour Format',  //Optional
         setLabel: 'Set',  //Optional
         closeLabel: 'Close',  //Optional
@@ -296,7 +303,7 @@ angular.module('starter.controllers', [])
       } else {
         var selectedTime = new Date(val * 1000);
         $scope.remindertime = selectedTime.getUTCHours() + " : " + selectedTime.getUTCMinutes();
-        $scope.timeInUTC = moment({hour:selectedTime.getUTCHours(), minute:selectedTime.getUTCMinutes() }).utc().format("h:mm");
+        $scope.timeInUTC = moment({hour:selectedTime.getUTCHours(), minute:selectedTime.getUTCMinutes() }).utc().format("h:mm a");
         $scope.utcdatetime = $scope.UTCdate +" "+ $scope.timeInUTC;
 
         var time24 = selectedTime.getUTCHours();

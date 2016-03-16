@@ -27,10 +27,13 @@
     {
       "locator": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git",
       "id": "cordova-plugin-inappbrowser"
+    },
+    {
+      "locator": "https://github.com/Wizcorp/phonegap-facebook-plugin.git",
+      "id": "phonegap-facebook-plugin"
     }
   ],
   "cordovaPlatforms": [
-    "android",
     {
       "platform": "android",
       "version": "",

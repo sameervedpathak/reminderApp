@@ -35,15 +35,38 @@
     <script src="lib/moment.js"></script>
     <script> moment().format(); </script>
     <script src="lib/moment-with-locales.min.js"></script>
+    
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
     <script src="js/logincontroller.js"></script>
     <script src="js/services.js"></script>
+    <script src="js/UserService.js"></script>
     <script src="config/config.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/PushNotification.js"></script>
-    
+    <!-- <script src="lib/cordova-facebook-connect-plugin.js" ></script> -->
+
+    <!-- <script type="text/javascript" src="lib/facebookConnectPlugin.js"></script>
+<div id="fb-root"></div> -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : 1623102964620661,
+          xfbml      : true,
+          version    : 'v2.1'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
   </head>
   <body ng-app="starter">
     <!--

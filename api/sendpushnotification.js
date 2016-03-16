@@ -136,8 +136,8 @@ var job = new CronJob({
               if(result){
              
                 for (var i = 0; i < result.length; i++) {
-                  console.log(result[i].reminder_date.yyyymmdd() + "==" + finaldate);
-                  console.log(result[i].reminder_time + "==" + UTCdate +" "+ currentUTCtime);
+                  //console.log(result[i].reminder_date.yyyymmdd() + "==" + finaldate);
+                  //console.log(result[i].reminder_time + "==" + UTCdate +" "+ currentUTCtime);
 
                   if (result[i].reminder_date.yyyymmdd() == finaldate && result[i].reminder_time == UTCdate +" "+ currentUTCtime) {
                       

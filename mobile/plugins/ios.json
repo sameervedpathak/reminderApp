@@ -72,6 +72,11 @@
         },
         "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "com.ionicframework.myapp547861"
+        },
+        "phonegap-facebook-plugin": {
+            "APP_ID": "1623102964620661",
+            "APP_NAME": "myfbapp",
+            "PACKAGE_NAME": "com.ionicframework.myapp547861"
         }
     },
     "dependent_plugins": {}
