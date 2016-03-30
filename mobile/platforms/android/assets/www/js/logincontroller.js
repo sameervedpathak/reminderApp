@@ -132,7 +132,7 @@ console.log(baseUrl)
 
   // This is the success callback from the login method
   var fbLoginSuccess = function(response) {
-    console.login("response:",response);
+    console.log("response:",response);
     if (!response.authResponse){
       fbLoginError("Cannot find the authResponse");
       return;
@@ -206,7 +206,7 @@ console.log(baseUrl)
               email: profileInfo.email,
               picture : "http://graph.facebook.com/" + success.authResponse.userID + "/picture?type=large"
             });
-
+            console.log("UserService.setUser:",UserService.setUser);
             //$state.go('app.home');
             $state.go('tab.addreminder');
           }, function(fail){
@@ -236,3 +236,6 @@ console.log(baseUrl)
   };    
 
 })
+
+
+
