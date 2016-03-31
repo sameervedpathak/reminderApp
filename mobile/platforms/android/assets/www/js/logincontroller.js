@@ -1,12 +1,15 @@
 angular.module('starter.controllers')
 
-.controller('logincontroller', function($scope, $http, $state, store , $location , $window, $timeout, $q, UserService, $ionicLoading) {
+.controller('logincontroller', function($scope, $http, $state, store , $location , $window, $timeout, $q, UserService, $ionicActionSheet, $ionicLoading) {
 
 	 $scope.init = function() {
       $scope.usersession = store.get('userDetail') || {} ;
       //console.log($scope.usersession.userid);
+      $scope.user = UserService.getUser();
    }
 
+   
+   
    /*
     @function userlogin
     @type post
@@ -68,21 +71,7 @@ console.log(baseUrl)
       }
     };
 
-    /**
-      @function usersignout
-      @author Sameer Vedpathak
-      @initialDate 
-      @lastDate
-    */
-   
-    $scope.usersignout = function() {
-      store.remove('userDetail');
-      store.remove('platform');
-      store.remove('deviceid');
-      store.remove('device_token');
-      $location.path('/login');
-      document.getElementById("loginfrm").reset();
-    };
+
 
      
     $scope.signup = function(info,valid){
@@ -235,6 +224,8 @@ console.log(baseUrl)
         facebookConnectPlugin.login(['email', 'public_profile'], fbLoginSuccess, fbLoginError);
       }
     });
+
+
   };    
 /****************** FB login code End **********************/
 
@@ -269,39 +260,78 @@ console.log(baseUrl)
     );
   };
 
-    $scope.user = UserService.getUser();
-
-  $scope.showLogOutMenu = function() {
-    var hideSheet = $ionicActionSheet.show({
-      destructiveText: 'Logout',
-      titleText: 'Are you sure you want to logout? This app is awsome so I recommend you to stay.',
-      cancelText: 'Cancel',
-      cancel: function() {},
-      buttonClicked: function(index) {
-        return true;
-      },
-      destructiveButtonClicked: function(){
-        $ionicLoading.show({
-          template: 'Logging out...'
-        });
-        // Google logout
-        window.plugins.googleplus.logout(
-          function (msg) {
-            console.log(msg);
-            $ionicLoading.hide();
-            $state.go('welcome');
-          },
-          function(fail){
-            console.log(fail);
-          }
-        );
-      }
-    });
-  };
-
-
 /****************** Google login code end **********************/
+
+    /**
+      @function usersignout
+      @author Sameer Vedpathak
+      @initialDate 
+      @lastDate
+    */
+   
+    /*$scope.usersignout = function() {*/
+        //console.log("in usersignout function");
+      $scope.showLogOutMenu = function() {
+        console.log("showLogOutMenu");
+        var hideSheet = $ionicActionSheet.show({
+          destructiveText: 'Logout',
+          titleText: 'Are you sure you want to logout? This app is awsome so I recommend you to stay.',
+          cancelText: 'Cancel',
+          cancel: function() {},
+          buttonClicked: function(index) {
+            return true;
+          },
+          destructiveButtonClicked: function(){
+            $ionicLoading.show({
+            template: 'Logging out...'
+            });
+
+            // Facebook logout
+             
+            if(facebookConnectPlugin){
+              facebookConnectPlugin.logout(function(){
+                $ionicLoading.hide();
+                $state.go('login');
+              },
+              function(fail){
+               $ionicLoading.hide();
+              });
+              console.log("logout from facebook !!!!");
+            } else if(window.plugins.googleplus){
+            // Google logout
+            console.log("google logout");
+            window.plugins.googleplus.logout(
+            function (msg) {
+              console.log(msg);
+              $ionicLoading.hide();
+              $state.go('login');
+            },
+            function(fail){
+             console.log(fail);
+            });
+          }else{
+
+             console.log("normal logout");
+             store.remove('userDetail');
+             store.remove('platform');
+             store.remove('deviceid');
+             store.remove('device_token');
+             $location.path('/login');
+            document.getElementById("loginfrm").reset(); 
+          }
+
+          }
+        });
+      };
+/*    };*/
+
+
+
+
 })
+
+
+
 
 
 
