@@ -24,20 +24,20 @@
         "source": "C:\\xampp\\htdocs\\reminderApp\\mobile\\platforms\\android\\phonegap-facebook-plugin\\myapp547861-FacebookLib\\res\\drawable\\com_facebook_list_divider.9.png"
     },
     {
-        "merged": "C:\\xampp\\htdocs\\reminderApp\\mobile\\platforms\\android\\phonegap-facebook-plugin\\myapp547861-FacebookLib\\build\\intermediates\\res\\merged\\release\\drawable\\com_facebook_top_button.xml",
-        "source": "C:\\xampp\\htdocs\\reminderApp\\mobile\\platforms\\android\\phonegap-facebook-plugin\\myapp547861-FacebookLib\\res\\drawable\\com_facebook_top_button.xml"
-    },
-    {
-        "merged": "C:\\xampp\\htdocs\\reminderApp\\mobile\\platforms\\android\\phonegap-facebook-plugin\\myapp547861-FacebookLib\\build\\intermediates\\res\\merged\\release\\drawable\\com_facebook_logo.png",
-        "source": "C:\\xampp\\htdocs\\reminderApp\\mobile\\platforms\\android\\phonegap-facebook-plugin\\myapp547861-FacebookLib\\res\\drawable\\com_facebook_logo.png"
+        "merged": "C:\\xampp\\htdocs\\reminderApp\\mobile\\platforms\\android\\phonegap-facebook-plugin\\myapp547861-FacebookLib\\build\\intermediates\\res\\merged\\release\\drawable\\com_facebook_picker_list_selector_background_transition.xml",
+        "source": "C:\\xampp\\htdocs\\reminderApp\\mobile\\platforms\\android\\phonegap-facebook-plugin\\myapp547861-FacebookLib\\res\\drawable\\com_facebook_picker_list_selector_background_transition.xml"
     },
     {
         "merged": "C:\\xampp\\htdocs\\reminderApp\\mobile\\platforms\\android\\phonegap-facebook-plugin\\myapp547861-FacebookLib\\build\\intermediates\\res\\merged\\release\\drawable\\com_facebook_picker_list_pressed.9.png",
         "source": "C:\\xampp\\htdocs\\reminderApp\\mobile\\platforms\\android\\phonegap-facebook-plugin\\myapp547861-FacebookLib\\res\\drawable\\com_facebook_picker_list_pressed.9.png"
     },
     {
-        "merged": "C:\\xampp\\htdocs\\reminderApp\\mobile\\platforms\\android\\phonegap-facebook-plugin\\myapp547861-FacebookLib\\build\\intermediates\\res\\merged\\release\\drawable\\com_facebook_picker_list_selector_background_transition.xml",
-        "source": "C:\\xampp\\htdocs\\reminderApp\\mobile\\platforms\\android\\phonegap-facebook-plugin\\myapp547861-FacebookLib\\res\\drawable\\com_facebook_picker_list_selector_background_transition.xml"
+        "merged": "C:\\xampp\\htdocs\\reminderApp\\mobile\\platforms\\android\\phonegap-facebook-plugin\\myapp547861-FacebookLib\\build\\intermediates\\res\\merged\\release\\drawable\\com_facebook_logo.png",
+        "source": "C:\\xampp\\htdocs\\reminderApp\\mobile\\platforms\\android\\phonegap-facebook-plugin\\myapp547861-FacebookLib\\res\\drawable\\com_facebook_logo.png"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\reminderApp\\mobile\\platforms\\android\\phonegap-facebook-plugin\\myapp547861-FacebookLib\\build\\intermediates\\res\\merged\\release\\drawable\\com_facebook_top_button.xml",
+        "source": "C:\\xampp\\htdocs\\reminderApp\\mobile\\platforms\\android\\phonegap-facebook-plugin\\myapp547861-FacebookLib\\res\\drawable\\com_facebook_top_button.xml"
     },
     {
         "merged": "C:\\xampp\\htdocs\\reminderApp\\mobile\\platforms\\android\\phonegap-facebook-plugin\\myapp547861-FacebookLib\\build\\intermediates\\res\\merged\\release\\drawable\\com_facebook_button_check_off.png",

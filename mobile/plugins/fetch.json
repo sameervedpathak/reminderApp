@@ -68,5 +68,15 @@
             "APP_ID": "1623102964620661",
             "APP_NAME": "myfbapp"
         }
+    },
+    "cordova-plugin-googleplus": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-googleplus"
+        },
+        "is_top_level": true,
+        "variables": {
+            "REVERSED_CLIENT_ID": "844470072816-8asi784c8ikt2i9l47oh13afmu6kh25s.apps.googleusercontent.com"
+        }
     }
 }

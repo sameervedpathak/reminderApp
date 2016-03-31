@@ -63,6 +63,14 @@
                         {
                             "xml": "<access origin=\"https://*.akamaihd.net\" />",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"GooglePlus\"><param name=\"android-package\" value=\"nl.xservices.plugins.GooglePlus\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://accounts.google.com/*\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -72,10 +80,6 @@
                     "/manifest": [
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\" />",
                             "count": 1
                         },
                         {
@@ -96,6 +100,14 @@
                         },
                         {
                             "xml": "<uses-permission android:name=\"com.ionicframework.myapp547861.permission.C2D_MESSAGE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.USE_CREDENTIALS\" />",
                             "count": 1
                         }
                     ],
@@ -173,6 +185,9 @@
             "APP_ID": "1623102964620661",
             "APP_NAME": "myfbapp",
             "PACKAGE_NAME": "com.ionicframework.myapp547861"
+        },
+        "cordova-plugin-googleplus": {
+            "PACKAGE_NAME": "com.ionicframework.myapp547861"
         }
     },
     "dependent_plugins": {},
@@ -239,6 +254,13 @@
             "clobbers": [
                 "facebookConnectPlugin"
             ]
+        },
+        {
+            "file": "plugins/cordova-plugin-googleplus/www/GooglePlus.js",
+            "id": "cordova-plugin-googleplus.GooglePlus",
+            "clobbers": [
+                "window.plugins.googleplus"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -251,6 +273,7 @@
         "cordova-plugin-statusbar": "2.0.0",
         "cordova-plugin-whitelist": "1.2.0",
         "ionic-plugin-keyboard": "1.0.8",
-        "phonegap-facebook-plugin": "0.12.0"
+        "phonegap-facebook-plugin": "0.12.0",
+        "cordova-plugin-googleplus": "4.0.8"
     }
 }

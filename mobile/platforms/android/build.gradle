@@ -246,6 +246,8 @@ dependencies {
     debugCompile project(path: "phonegap-facebook-plugin:FacebookLib", configuration: "debug")
     releaseCompile project(path: "phonegap-facebook-plugin:FacebookLib", configuration: "release")
     compile "com.android.support:support-v4:+"
+    compile "com.google.android.gms:play-services-plus:+"
+    compile "com.google.android.gms:play-services-identity:+"
     // SUB-PROJECT DEPENDENCIES END
 }
 

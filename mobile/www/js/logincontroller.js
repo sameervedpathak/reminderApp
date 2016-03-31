@@ -130,6 +130,8 @@ console.log(baseUrl)
       
     }
 
+/****************** FB login code **********************/
+
   // This is the success callback from the login method
   var fbLoginSuccess = function(response) {
     console.log("response:",response);
@@ -152,7 +154,7 @@ console.log(baseUrl)
         picture : "http://graph.facebook.com/" + authResponse.userID + "/picture?type=large"
       });
       $ionicLoading.hide();
-      $state.go('app.home');
+      $state.go('tab.addreminder');;
     }, function(fail){
       // Fail get profile info
       console.log('profile info fail', fail);
@@ -234,7 +236,71 @@ console.log(baseUrl)
       }
     });
   };    
+/****************** FB login code End **********************/
 
+/****************** Google login code **********************/
+ $scope.googleSignIn = function() {
+  console.log("googleSignIn");
+
+    $ionicLoading.show({
+      template: 'Logging in...'
+    });
+
+    window.plugins.googleplus.login(
+      {},
+      function (user_data) {
+        console.log("user_data:",user_data);
+        // For the purpose of this example I will store user data on local storage
+        UserService.setUser({
+          userID: user_data.userId,
+          name: user_data.displayName,
+          email: user_data.email,
+          picture: user_data.imageUrl,
+          accessToken: user_data.accessToken,
+          idToken: user_data.idToken
+        });
+
+        $ionicLoading.hide();
+        $state.go('tab.addreminder');
+      },
+      function (msg) {
+        $ionicLoading.hide();
+      }
+    );
+  };
+
+    $scope.user = UserService.getUser();
+
+  $scope.showLogOutMenu = function() {
+    var hideSheet = $ionicActionSheet.show({
+      destructiveText: 'Logout',
+      titleText: 'Are you sure you want to logout? This app is awsome so I recommend you to stay.',
+      cancelText: 'Cancel',
+      cancel: function() {},
+      buttonClicked: function(index) {
+        return true;
+      },
+      destructiveButtonClicked: function(){
+        $ionicLoading.show({
+          template: 'Logging out...'
+        });
+        // Google logout
+        window.plugins.googleplus.logout(
+          function (msg) {
+            console.log(msg);
+            $ionicLoading.hide();
+            $state.go('welcome');
+          },
+          function(fail){
+            console.log(fail);
+          }
+        );
+      }
+    });
+  };
+
+
+/****************** Google login code end **********************/
 })
 
 
